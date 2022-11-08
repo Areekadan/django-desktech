@@ -14,4 +14,3 @@ def get_rater(self, obj):
 
 def get_agent(self, obj):
     return obj.agent.user.username
-
