@@ -25,8 +25,8 @@ class ProductSerializer(serializers.ModelSerializer):
             "published_status",
             "views",
             ]
-        def get_user(self,obj):
-            return obj.user.username
+    def get_user(self,obj):
+        return obj.user.username
 class ProductCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product

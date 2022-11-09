@@ -92,7 +92,7 @@ class Product(TimeStampedUUIDModel):
         verbose_name_plural = "Products"
     def save(self, *args, **kwargs):
         self.title = str.title(self.title)
-        self.description = str.description(self.description)
+        self.description = str.capitalize(self.description)
         self.ref_code = "".join(random.choices(string.ascii_uppercase + string.digits, k=10)
         )
         super(Product, self).save(*args, **kwargs)
