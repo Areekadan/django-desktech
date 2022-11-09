@@ -18,7 +18,7 @@ class Profile(TimeStampedUUIDModel): #dont really need a profile page.
    )
    phone_number = PhoneNumberField(verbose_name=_("Phone Number"), max_length=30, default="+17804545454"
    )
-   license = models.CharField(verbose_name=_("Real Estate license"), max_length=20, blank=True, null=True
+   license = models.CharField(verbose_name=_("Business license"), max_length=20, blank=True, null=True
    )
    about_me = models.TextField(verbose_name=_("About Me"), default="say something about yourself"
    )
@@ -33,13 +33,13 @@ class Profile(TimeStampedUUIDModel): #dont really need a profile page.
    city=models.CharField(verbose_name=_("City"), max_length=180, default="Edmonton", blank=False, null=False
    )
    is_buyer= models.BooleanField(verbose_name=_("Buyer"), default=False,
-   help_text=_("Are you looking to become a member")
+   help_text=_("Are you looking to become an exclusive member")
    )
    is_seller= models.BooleanField(verbose_name=_("Seller"), default=False,
-   help_text=_("Are you looking to sell")
+   help_text=_("Are you looking to sell product")
    )
    is_agent = models.BooleanField(verbose_name=_("Agent"), default=False,
-   help_text=_("Are you an agent?")
+   help_text=_("Do you already have a valid business?")
    )
    top_agent= models.BooleanField(verbose_name=_("Top Agent"), default=False
    )
