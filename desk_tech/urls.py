@@ -12,7 +12,7 @@ urlpatterns = [
     path("api/v1/products/", include("apps.products.urls")),
     path("api/v1/ratings/", include("apps.ratings.urls")),
 
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
 
 admin.site.site_header = "DeskTech Admin"
 admin.site.site_title = "DeskTech Admin Portal"
